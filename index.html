@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KC Restaurant | Best Chinese Food in New Delhi</title>
+
+<meta name="description" content="KC Restaurant serves delicious Chinese food in New Delhi. Enjoy noodles, fried rice, momos, and soups. Order easily via WhatsApp.">
+
+<meta property="og:title" content="KC Restaurant - Delicious Chinese Food">
+<meta property="og:description" content="Order noodles, fried rice, momos and more from KC Restaurant.">
+<meta property="og:image" content="https://yourwebsite.com/images/restaurant.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourwebsite.com">
+
+<link rel="icon" href="images/icon.jpg">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Kc Restaurant</h1>
+
+<div class="menu-toggle" onclick="toggleNav()">
+☰
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<button onclick="toggleCart()" id="cart-btn">
+🛒 Cart (<span id="cart-count">0</span>)
+</button>
+
+
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<h2>Welcome to KC Restaurant</h2>
+
+<p>Delicious Food | Great Taste | Best Experience</p>
+
+<a href="#menu">
+<button class="menu-btn" onclick="toggleMenu()">View Menu</button>
+</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<h2>About Us</h2>
+
+<p>
+KC Restaurant serves fresh and delicious food with authentic taste.
+We focus on quality ingredients and great customer experience.
+<br>
+We are rulling The Ramphal Chowk of Dwarka Sector-7
+<br>
+People Say The Place Is Known For
+<br>
+Awesome Spot to Hangout, Excellent Location, Amazing Restaurant, Concept, Perfect Presentation, Worth the Money
+</p>
+
+</section>
+
+<!--Gallery-->
+
+<section class="gallery">
+
+<h2>Our Gallery</h2>
+
+<div class="gallery-container">
+
+<img src="images/1.avif" alt="Noodles">
+
+<img src="images/2.jpg" alt="Fried Rice">
+
+<img src="images/5.avif" alt="Momos">
+
+<img src="images/6.jpg" alt="Soup">
+
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section class="menu" id="menuSection">
+
+<h2>Our Menu</h2>
+
+<div class="menu-grid">
+
+<!-- COLUMN 1 -->
+
+<div class="menu-column">
+
+<h3>Soup Specials</h3>
+<ul>
+
+<li><span>Vegetable Soup</span><span>₹90</span><button onclick="addToCart('Vegetable Soup',90)">Add</button></li>
+<li><span>Veg Clear Soup</span><span>₹90</span><button onclick="addToCart('Veg Clear Soup',90)">Add</button></li>
+<li><span>Veg Sweet Corn Soup</span><span>₹90</span><button onclick="addToCart('Veg Sweet Corn Soup',90)">Add</button></li>
+<li><span>Veg Mushroom Soup</span><span>₹90</span><button onclick="addToCart('Veg Mushroom Soup',90)">Add</button></li>
+<li><span>Veg Talumein Soup</span><span>₹90</span><button onclick="addToCart('Veg Talumein Soup',90)">Add</button></li>
+<li><span>Veg Lemon Coriander Soup</span><span>₹90</span><button onclick="addToCart('Veg Lemon Coriander Soup',90)">Add</button></li>
+<li><span>Veg Thukpa Soup</span><span>₹90</span><button onclick="addToCart('Veg Thukpa Soup',90)">Add</button></li>
+<li><span>Cream of Tomato Soup</span><span>₹90</span><button onclick="addToCart('Cream of Tomato Soup',90)">Add</button></li>
+<li><span>Veg Hot N Sour Soup</span><span>₹90</span><button onclick="addToCart('Veg Hot N Sour Soup',90)">Add</button></li>
+<li><span>Veg Manchow Soup</span><span>₹90</span><button onclick="addToCart('Veg Manchow Soup',90)">Add</button></li>
+<li><span>Chicken Soup</span><span>₹110</span><button onclick="addToCart('Chicken Soup',110)">Add</button></li>
+<li><span>Chicken Clear Soup</span><span>₹110</span><button onclick="addToCart('Chicken Clear Soup',110)">Add</button></li>
+<li><span>Chicken Talumein Soup</span><span>₹110</span><button onclick="addToCart('Chicken Talumein Soup',110)">Add</button></li>
+<li><span>Chicken Lemon Coriander Soup</span><span>₹110</span><button onclick="addToCart('Chicken Lemon Coriander Soup',110)">Add</button></li>
+<li><span>Chicken Manchow Soup</span><span>₹110</span><button onclick="addToCart('Chicken Manchow Soup',110)">Add</button></li>
+<li><span>Chicken Hot N Sour Soup</span><span>₹110</span><button onclick="addToCart('Chicken Hot N Sour Soup',110)">Add</button></li>
+<li><span>Chicken Sweet Corn Soup</span><span>₹110</span><button onclick="addToCart('Chicken Sweet Corn Soup',110)">Add</button></li>
+<li><span>Chicken Thukpa Soup</span><span>₹110</span><button onclick="addToCart('Chicken Thukpa Soup',110)">Add</button></li>
+
+</ul>
+
+
+<h3>Veg Starters</h3>
+<ul>
+
+<li><span>Chilli Potato</span><span>₹100</span><button onclick="addToCart('Chilli Potato',100)">Add</button></li>
+<li><span>Honey Chilli Potato</span><span>₹110</span><button onclick="addToCart('Honey Chilli Potato',110)">Add</button></li>
+<li><span>Veg Spring Roll</span><span>₹110</span><button onclick="addToCart('Veg Spring Roll',110)">Add</button></li>
+<li><span>KC Special Spring Roll</span><span>₹130</span><button onclick="addToCart('KC Special Spring Roll',130)">Add</button></li>
+<li><span>Veg Salt & Pepper</span><span>₹150</span><button onclick="addToCart('Veg Salt & Pepper',150)">Add</button></li>
+<li><span>Fried Baby Corn</span><span>₹150</span><button onclick="addToCart('Fried Baby Corn',150)">Add</button></li>
+<li><span>Crispy Veg</span><span>₹150</span><button onclick="addToCart('Crispy Veg',150)">Add</button></li>
+<li><span>Chilli Paneer (Dry)</span><span>₹150</span><button onclick="addToCart('Chilli Paneer (Dry)',150)">Add</button></li>
+<li><span>Lemon Paneer (Dry)</span><span>₹150</span><button onclick="addToCart('Lemon Paneer (Dry)',150)">Add</button></li>
+<li><span>Chilli Mushroom (Dry)</span><span>₹150</span><button onclick="addToCart('Chilli Mushroom (Dry)',150)">Add</button></li>
+<li><span>Veg Chilli Chaap (Dry)</span><span>₹150</span><button onclick="addToCart('Veg Chilli Chaap (Dry)',150)">Add</button></li>
+<li><span>Veg Manchurian (Dry)</span><span>₹150</span><button onclick="addToCart('Veg Manchurian (Dry)',150)">Add</button></li>
+<li><span>Paneer Manchurian (Dry)</span><span>₹160</span><button onclick="addToCart('Paneer Manchurian (Dry)',160)">Add</button></li>
+<li><span>Schezwan Paneer (Dry)</span><span>₹160</span><button onclick="addToCart('Schezwan Paneer (Dry)',160)">Add</button></li>
+<li><span>Paneer 65</span><span>₹160</span><button onclick="addToCart('Paneer 65',160)">Add</button></li>
+
+</ul>
+
+<h3>Gravy</h3>
+<ul>
+
+<li><span>Veg Manchurian</span><span>₹200</span><button onclick="addToCart('Veg Manchurian',200)">Add</button></li>
+<li><span>Veg Sweet & Sour</span><span>₹200</span><button onclick="addToCart('Veg Sweet & Sour',200)">Add</button></li>
+<li><span>Chilli Mushroom</span><span>₹220</span><button onclick="addToCart('Chilli Mushroom',220)">Add</button></li>
+<li><span>Chilli Paneer</span><span>₹220</span><button onclick="addToCart('Chilli Paneer',220)">Add</button></li>
+<li><span>Paneer Manchurian</span><span>₹220</span><button onclick="addToCart('Paneer Manchurian',220)">Add</button></li>
+<li><span>Veg Hot Garlic Sauce</span><span>₹220</span><button onclick="addToCart('Veg Hot Garlic Sauce',220)">Add</button></li>
+<li><span>Chicken Sweet & Sour</span><span>₹270</span><button onclick="addToCart('Chicken Sweet & Sour',270)">Add</button></li>
+<li><span>Chicken Manchurian</span><span>₹270</span><button onclick="addToCart('Chicken Manchurian',270)">Add</button></li>
+<li><span>Chilli Chicken</span><span>₹270</span><button onclick="addToCart('Chilli Chicken',270)">Add</button></li>
+<li><span>Lemon Chicken</span><span>₹270</span><button onclick="addToCart('Lemon Chicken',270)">Add</button></li>
+<li><span>Ginger Chicken</span><span>₹270</span><button onclick="addToCart('Ginger Chicken',270)">Add</button></li>
+<li><span>Chicken Hong Kong</span><span>₹270</span><button onclick="addToCart('Chicken Hong Kong',270)">Add</button></li>
+<li><span>Diced Chicken</span><span>₹270</span><button onclick="addToCart('Diced Chicken',270)">Add</button></li>
+<li><span>Chicken Schezwan Gravy</span><span>₹290</span><button onclick="addToCart('Chicken Schezwan Gravy',290)">Add</button></li>
+<li><span>Honey Chicken Gravy</span><span>₹290</span><button onclick="addToCart('Honey Chicken Gravy',290)">Add</button></li>
+</ul>
+
+
+</div>
+
+
+<!-- COLUMN 2 -->
+
+<div class="menu-column">
+
+<h3>Chicken Starters</h3>
+<ul>
+
+<li><span>Chicken Spring Roll</span><span>₹130</span><button onclick="addToCart('Chicken Spring Roll',130)">Add</button></li>
+<li><span>Crispy Chicken</span><span>₹220</span><button onclick="addToCart('Crispy Chicken',220)">Add</button></li>
+<li><span>Crispy Honey Chicken</span><span>₹240</span><button onclick="addToCart('Crispy Honey Chicken',240)">Add</button></li>
+<li><span>Chicken Hot Wings (10 pcs)</span><span>₹270</span><button onclick="addToCart('Chicken Hot Wings (10 pcs)',270)">Add</button></li>
+<li><span>Chicken Lollypop (8 pcs)</span><span>₹270</span><button onclick="addToCart('Chicken Lollypop (8 pcs)',270)">Add</button></li>
+<li><span>Chilli Chicken (Dry)</span><span>₹270</span><button onclick="addToCart('Chilli Chicken (Dry)',270)">Add</button></li>
+<li><span>Chicken Manchurian (Dry)</span><span>₹270</span><button onclick="addToCart('Chicken Manchurian (Dry)',270)">Add</button></li>
+<li><span>Chicken Salt Pepper</span><span>₹270</span><button onclick="addToCart('Chicken Salt Pepper',270)">Add</button></li>
+<li><span>Ginger Chicken</span><span>₹270</span><button onclick="addToCart('Ginger Chicken',270)">Add</button></li>
+<li><span>Lemon Chicken (Dry)</span><span>₹270</span><button onclick="addToCart('Lemon Chicken (Dry)',270)">Add</button></li>
+<li><span>Chicken Hongkong</span><span>₹270</span><button onclick="addToCart('Chicken Hongkong',270)">Add</button></li>
+<li><span>Singapuri Chicken</span><span>₹270</span><button onclick="addToCart('Singapuri Chicken',270)">Add</button></li>
+<li><span>Chicken 65 Bombay Style</span><span>₹270</span><button onclick="addToCart('Chicken 65 Bombay Style',270)">Add</button></li>
+<li><span>Chicken Schezwan</span><span>₹290</span><button onclick="addToCart('Chicken Schezwan',290)">Add</button></li>
+<li><span>Drums of Heaven (8 pcs)</span><span>₹290</span><button onclick="addToCart('Drums of Heaven (8 pcs)',290)">Add</button></li>
+
+</ul>
+
+
+<h3>Rice</h3>
+<ul>
+
+<li><span>Veg Fried Rice</span><span>₹90</span><button onclick="addToCart('Veg Fried Rice',90)">Add</button></li>
+<li><span>Veg Chilli Garlic Rice</span><span>₹120</span><button onclick="addToCart('Veg Chilli Garlic Rice',120)">Add</button></li>
+<li><span>Mushroom Rice</span><span>₹120</span><button onclick="addToCart('Mushroom Rice',120)">Add</button></li>
+<li><span>Paneer Fried Rice</span><span>₹120</span><button onclick="addToCart('Paneer Fried Rice',120)">Add</button></li>
+<li><span>Veg Singapuri Rice</span><span>₹120</span><button onclick="addToCart('Veg Singapuri Rice',120)">Add</button></li>
+<li><span>Veg Shezwan Rice</span><span>₹120</span><button onclick="addToCart('Veg Shezwan Rice',120)">Add</button></li>
+<li><span>Veg Hakka Rice</span><span>₹120</span><button onclick="addToCart('Veg Hakka Rice',120)">Add</button></li>
+<li><span>Egg Fried Rice</span><span>₹120</span><button onclick="addToCart('Egg Fried Rice',120)">Add</button></li>
+<li><span>Chicken Fried Rice</span><span>₹130</span><button onclick="addToCart('Chicken Fried Rice',130)">Add</button></li>
+<li><span>Chicken Chilli Garlic Rice</span><span>₹140</span><button onclick="addToCart('Chicken Chilli Garlic Rice',140)">Add</button></li>
+<li><span>Chicken Singapuri Rice</span><span>₹140</span><button onclick="addToCart('Chicken Singapuri Rice',140)">Add</button></li>
+<li><span>Chicken Shezwan Rice</span><span>₹140</span><button onclick="addToCart('Chicken Shezwan Rice',140)">Add</button></li>
+<li><span>Chicken Hakka Rice</span><span>₹140</span><button onclick="addToCart('Chicken Hakka Rice',140)">Add</button></li>
+<li><span>Mix Rice (Egg Chicken)</span><span>₹150</span><button onclick="addToCart('Mix Rice (Egg Chicken)',150)">Add</button></li>
+
+</ul>
+
+<h3>Noodles</h3>
+<ul>
+
+<li><span>Veg Noodles</span><span>₹120</span><button onclick="addToCart('Veg Noodles',120)">Add</button></li>
+<li><span>Chilli Garlic Noodles</span><span>₹130</span><button onclick="addToCart('Chilli Garlic Noodles',130)">Add</button></li>
+<li><span>Hakka Noodles</span><span>₹130</span><button onclick="addToCart('Hakka Noodles',130)">Add</button></li>
+<li><span>Paneer Noodles</span><span>₹130</span><button onclick="addToCart('Paneer Noodles',130)">Add</button></li>
+<li><span>Singapuri Noodles</span><span>₹130</span><button onclick="addToCart('Singapuri Noodles',130)">Add</button></li>
+<li><span>Mushroom Noodles</span><span>₹130</span><button onclick="addToCart('Mushroom Noodles',130)">Add</button></li>
+<li><span>Schezwan Noodles</span><span>₹130</span><button onclick="addToCart('Schezwan Noodles',130)">Add</button></li>
+<li><span>Veg Chopsuey</span><span>₹150</span><button onclick="addToCart('Veg Chopsuey',150)">Add</button></li>
+<li><span>Chicken Noodles</span><span>₹130</span><button onclick="addToCart('Chicken Noodles',130)">Add</button></li>
+<li><span>Egg Noodles</span><span>₹130</span><button onclick="addToCart('Egg Noodles',130)">Add</button></li>
+<li><span>Chicken Hakka Noodles</span><span>₹140</span><button onclick="addToCart('Chicken Hakka Noodles',140)">Add</button></li>
+<li><span>Chicken Singapuri Noodles</span><span>₹140</span><button onclick="addToCart('Chicken Singapuri Noodles',140)">Add</button></li>
+<li><span>Chicken Chilli Garlic Noodles</span><span>₹140</span><button onclick="addToCart('Chicken Chilli Garlic Noodles',140)">Add</button></li>
+<li><span>Chicken Schezwan Noodles</span><span>₹140</span><button onclick="addToCart('Chicken Schezwan Noodles',140)">Add</button></li>
+<li><span>Mix Noodles (Egg Chicken)</span><span>₹160</span><button onclick="addToCart('Mix Noodles (Egg Chicken)',160)">Add</button></li>
+<li><span>Chicken Chopsuey</span><span>₹170</span><button onclick="addToCart('Chicken Chopsuey',170)">Add</button></li>
+
+</ul>
+
+</div>
+
+
+<!-- COLUMN 3 -->
+
+<div class="menu-column">
+
+
+<h3>Steam Momo</h3>
+<ul>
+
+<li><span>Veg Steam Momo</span><span>₹120</span><button onclick="addToCart('Veg Steam Momo',120)">Add</button></li>
+<li><span>Paneer Steam Momo</span><span>₹130</span><button onclick="addToCart('Paneer Steam Momo',130)">Add</button></li>
+<li><span>Cheese Corn Steam Momo</span><span>₹130</span><button onclick="addToCart('Cheese Corn Steam Momo',130)">Add</button></li>
+<li><span>Mushroom Steam Momo</span><span>₹130</span><button onclick="addToCart('Mushroom Steam Momo',130)">Add</button></li>
+<li><span>Chicken Steam Momo</span><span>₹140</span><button onclick="addToCart('Chicken Steam Momo',140)">Add</button></li>
+<li><span>Prawn Steam Momo</span><span>₹160</span><button onclick="addToCart('Prawn Steam Momo',160)">Add</button></li>
+
+</ul>
+
+<h3>KC Crunchy</h3>
+<ul>
+
+<li><span>Crispy Veg Momo</span><span>₹160</span><button onclick="addToCart('Crispy Veg Momo',160)">Add</button></li>
+<li><span>Crispy Paneer Momo</span><span>₹170</span><button onclick="addToCart('Crispy Paneer Momo',170)">Add</button></li>
+<li><span>Corn Cheese Balls Momo</span><span>₹160</span><button onclick="addToCart('Corn Cheese Balls Momo',160)">Add</button></li>
+<li><span>Crispy Chicken Momo</span><span>₹170</span><button onclick="addToCart('Crispy Chicken Momo',170)">Add</button></li>
+<li><span>Crispy Prawn Momo</span><span>₹180</span><button onclick="addToCart('Crispy Prawn Momo',180)">Add</button></li>
+<li><span>Veg Pizza Momo</span><span>₹180</span><button onclick="addToCart('Veg Pizza Momo',180)">Add</button></li>
+<li><span>Non Veg Pizza Momo</span><span>₹200</span><button onclick="addToCart('Non Veg Pizza Momo',200)">Add</button></li>
+
+</ul>
+
+<h3>KC Special Momo</h3>
+<ul>
+
+<li><span>Veg Special Momo</span><span>₹150</span><button onclick="addToCart('Veg Special Momo',150)">Add</button></li>
+<li><span>Paneer Special Momo</span><span>₹160</span><button onclick="addToCart('Paneer Special Momo',160)">Add</button></li>
+<li><span>Chicken Special Momo</span><span>₹170</span><button onclick="addToCart('Chicken Special Momo',170)">Add</button></li>
+
+</ul>
+
+<h3>Hot Garlic Momo</h3>
+<ul>
+
+<li><span>Veg Hot Garlic Momo</span><span>₹150</span><button onclick="addToCart('Veg Hot Garlic Momo',150)">Add</button></li>
+<li><span>Paneer Hot Garlic Momo</span><span>₹160</span><button onclick="addToCart('Paneer Hot Garlic Momo',160)">Add</button></li>
+<li><span>Chicken Hot Garlic Momo</span><span>₹170</span><button onclick="addToCart('Chicken Hot Garlic Momo',170)">Add</button></li>
+
+</ul>
+
+<h3>Pan Fried Momos</h3>
+<ul>
+
+<li><span>Veg Pan Fried Momo</span><span>₹140</span><button onclick="addToCart('Veg Pan Fried Momo',140)">Add</button></li>
+<li><span>Paneer Pan Fried Momo</span><span>₹150</span><button onclick="addToCart('Paneer Pan Fried Momo',150)">Add</button></li>
+<li><span>Chicken Pan Fried Momo</span><span>₹160</span><button onclick="addToCart('Chicken Pan Fried Momo',160)">Add</button></li>
+<li><span>Lemon Momo</span><span>₹160</span><button onclick="addToCart('Lemon Momo',160)">Add</button></li>
+
+</ul>
+
+<h3>Tandoori Momo</h3>
+<ul>
+
+<li><span>Veg Tandoori Momo</span><span>₹160</span><button onclick="addToCart('Veg Tandoori Momo',160)">Add</button></li>
+<li><span>Paneer Tandoori Momo</span><span>₹170</span><button onclick="addToCart('Paneer Tandoori Momo',170)">Add</button></li>
+<li><span>Chicken Tandoori Momo</span><span>₹180</span><button onclick="addToCart('Chicken Tandoori Momo',180)">Add</button></li>
+
+</ul>
+
+<h3>Paneer Tikka</h3>
+<ul>
+
+<li><span>Paneer Tikka</span><span>₹180</span><button onclick="addToCart('Paneer Tikka',180)">Add</button></li>
+<li><span>Malai Paneer Tikka</span><span>₹190</span><button onclick="addToCart('Malai Paneer Tikka',190)">Add</button></li>
+<li><span>Achari Paneer Tikka</span><span>₹190</span><button onclick="addToCart('Achari Paneer Tikka',190)">Add</button></li>
+
+</ul>
+
+<h3>Tandoori Chaap</h3>
+<ul>
+
+<li><span>Regular Chaap</span><span>₹120</span><button onclick="addToCart('Regular Chaap',120)">Add</button></li>
+<li><span>Malai Chaap</span><span>₹150</span><button onclick="addToCart('Malai Chaap',150)">Add</button></li>
+<li><span>Achari Chaap</span><span>₹150</span><button onclick="addToCart('Achari Chaap',150)">Add</button></li>
+<li><span>Afghani Chaap</span><span>₹160</span><button onclick="addToCart('Afghani Chaap',160)">Add</button></li>
+<li><span>Butter Malai Chaap</span><span>₹170</span><button onclick="addToCart('Butter Malai Chaap',170)">Add</button></li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CART PANEL -->
+
+<div id="cart-panel">
+
+<h2>Your Order</h2>
+
+<button class="close-cart" onclick="toggleCart()">✖</button>
+
+<ul id="cart-items"></ul>
+
+<p>Items Total: ₹<span id="cart-total">0</span></p>
+<p>Delivery Charge: ₹20</p>
+<p><strong>Grand Total: ₹<span id="grand-total">0</span></strong></p>
+
+<button onclick="sendWhatsAppOrder()">Order on WhatsApp</button>
+
+<div id="cart-popup">Item added to cart</div>
+
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-info">
+
+<div class="contact-box">
+<h3>📍 Address</h3>
+<p>
+    near, Ramphal Chowk Rd,
+    <br>
+    opp. to vandana printers,
+    Block C, Sector 7 Dwarka,
+    <br>
+    New Delhi, Delhi, 110077</p>
+</div>
+
+<div class="contact-box">
+<h3>📞 Phone</h3>
+<p>
+<a href="tel:011-47027821">011-47027821</a>
+</p>
+<p>
+<a href="tel:+91 8800286677">+91 8800286677</a>
+</p>
+<p>
+<a href="tel:+91 8800288268">+91 8800288268</a>
+</p>
+
+</div>
+
+<div class="contact-box">
+<h3>⏰ Opening Hours</h3>
+<p>Mon - Sun : 11:00 AM – 11:00 PM</p>
+</div>
+
+</div>
+
+<!-- Google Map -->
+
+<div class="map-container">
+
+<iframe
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2869.3904771204284!2d77.0705875!3d28.585232099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b17cb688959%3A0x8fd858e8c93bb286!2sKC%20Restaurant!5e1!3m2!1sen!2sin!4v1773425798296!5m2!1sen!2sin"
+width="100%"
+height="350"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+<!--Social media-->
+
+<section class="social-contact">
+
+<h2>Connect With Us</h2>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/kcrestaurantofficial/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/KcRestaurant1/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 KC Restaurant</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
