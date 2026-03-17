@@ -126,8 +126,8 @@ menu.scrollIntoView({ behavior: "smooth" });
 
 function toggleNav(){
 
-let nav = document.getElementById("nav-links");
+let navLinks = document.getElementById("nav-links");
 
-nav.classList.toggle("show");
+navLinks.classList.toggle("show");
 
 }
